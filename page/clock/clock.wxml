@@ -1,0 +1,8 @@
+<!--logs.wxml-->
+<view class="container">
+  <block>
+    <navigator url='page/audioTimer/audioTimer'>
+      <button type="primary" size="default" bindtap="navigateToAudioTimer">语音倒计时</button>
+    </navigator>
+  </block>
+</view>

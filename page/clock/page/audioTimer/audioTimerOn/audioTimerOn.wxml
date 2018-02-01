@@ -1,0 +1,27 @@
+<!--page/clock/page/audioTimer/page/audioTimerOn.wxml-->
+<view class="container">
+  <view class='page-body'>
+
+    <view class='page-section'>
+      <view class='taskName'>
+        <text>{{taskName}}</text>
+      </view>
+    </view>
+
+    <!-- 时钟 -->
+    <view class='page-section'>
+      <view style='text-align:center'>
+        <text style='font-size:50px'>{{leftTimeStr}}</text>
+      </view>
+    </view>
+    <!-- 提示 -->
+    <view class='page-section'>
+      <view class='keep-on-tip'>倒计时执行期间，请勿关闭微信或‘纸与钟’</view>
+    </view>
+
+    <!-- 结束按钮 -->
+    <view class='page-section'>
+      <button type='primary' style="width:50%">结束</button>
+    </view>
+  </view>
+</view>

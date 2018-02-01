@@ -1,0 +1,64 @@
+/**app.wxss**/
+
+/* reset */
+.page {
+  background-color: #F8F8F8;
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 1.6;
+}
+checkbox,radio{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+form{
+  width: 100%;
+}
+/* lib */
+.strong {
+  font-weight: bold;
+}
+.tc{
+  text-align: center;
+}
+/* page */
+.container {
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  min-height:100%;
+  /* align-items: center; */
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  font-family: -apple-system-font, Helvetica, Neue,Helvetica,sans-serif;
+} 
+.btn-mid-normal {
+height: 18pt;
+}
+.page-body {
+  width: 100%;
+  flex-flow: 1;
+  overflow-x: hidden;
+}
+.page-section {
+  width: 100%;
+  margin-bottom: 60rpx;
+}
+.page-section:last-child {
+  margin-bottom: 0;
+}
+.page-section-title {
+  font-size: 28rpx;
+  color:#999999;
+  margin-bottom: 10rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.btn-area {
+  margin-top: 60rpx;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 30rpx;
+}

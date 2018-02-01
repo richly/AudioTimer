@@ -1,0 +1,88 @@
+<!--pages/clock/audioTimer/audioTimer.wxml-->
+<view class="container">
+  <view class='page-body'>
+
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class='page-section'>
+        <view class='page-section-title'>任务名</view>
+        <view class='weui-cells weui-cells_after-title'>
+          <view class='weui-cell weui-cell_input'>
+            <view class='weui-cell__bd'>
+              <input class='weui-input' name='input' placeholder='如：考试' focus='true'></input>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class='page-section'>
+        <view class='page-section-title'>任务时长</view>
+        <view class='weui-cells weui-cells_after-title'>
+          <view class='weui-cell weui-cell_input'>
+            <view class='weui-cell__bd'>
+              <picker bindchange='timePickerChange' value='{{index}}' range='{{timeArray}}' start='0' end='3'>
+              <!--picker设置start和end可以避免数组循环-->
+                <view class='weui-input'>{{timeArray[index]}}分钟</view>
+              </picker>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view wx:if="{{items[index].length>0}}" class='page-section'>
+        <view class='page-section-title'>提醒时间点</view>
+        <view class='weui-cells weui-cells_after-title'>
+          <checkbox-group bindChange="timeCheckboxChange">
+            <label class='weui-cell weui-check__label' wx:for='{{items[index]}}' wx:key="{{item.value}}">
+              <view class='weui-cell__hd'>
+                <checkbox value='{{item.value}}' checked="{{item.checked}}" />
+              </view>
+              <view class='weui-cell__bd'>{{item.name}}</view>
+            </label>
+          </checkbox-group>
+        </view>
+
+      </view>
+
+      <view class='btn-area'>
+          <button type="primary" style="width:70%;margin-bottom:20rpx;" form-type="submit">开始</button>
+          <button form-type='reset' style="width:70%;">重置</button>
+      </view>
+      <!-- <view class='page-section'>
+        <view class='weui-cells_title'>开始时间</view>
+        <view class='weui-cells weui-cells_after-title'>
+          <view class='weui-cell weui-cell_input'>
+            <view class='weui-cell__hd'>
+              <view class='weui-label'>当前选择</view>
+            </view>
+            <view class='weui-cell__bd'>
+              <picker mode="time" value="{{startTime}}" start="00:00" end="23:59" bindchange="startTimeChange">
+                <view class="weui-input">{{startTime}}</view>
+              </picker>
+            </view>
+          </view>
+
+          <view class='weui-cells_title'>结束时间</view>
+          <view class='weui-cells weui-cells_after-title'>
+            <view class='weui-cell weui-cell_input'>
+              <view class='weui-cell__hd'>
+                <view class='weui-label'>当前选择</view>
+              </view>
+
+              <view class='weui-cell__bd'>
+                <picker mode="time" value="{{endTime}}" start="00:00" end="23:59" bindchange="endTimeChange">
+                  <view class="weui-input">{{endTime}}</view>
+                </picker>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class='btn-area'>
+          <button type="primary" form-type="submit">Submit</button>
+          <button form-type='reset'>Reset</button>
+        </view>
+      </view> -->
+    </form>
+
+  </view>
+</view>

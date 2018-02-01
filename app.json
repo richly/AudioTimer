@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "page/clock/clock",
+    "page/clock/page/audioTimer/audioTimer",
+    "page/clock/page/audioTimer/audioTimerOn/audioTimerOn"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "语音倒计时",
+    "navigationBarTextStyle":"black"
+  }
+  ,"networkTimeout":{
+    "request":10000
+    ,"downloadFile":10000
+  }
+  ,"debug":true
+}
